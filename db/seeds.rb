@@ -8,6 +8,16 @@
 
 # ID3 tag music genres are surprisingly specific.
 
+artists = Hash[[
+  "Evlis",
+  "AC/DC",
+  "Patsy Cline",
+  "Wu-Tang Clan",
+  "P!nk"
+].map { |artist| [artist, Artist.find_or_create_by(name: artist)] }]
+
+
+
 genres = Hash[[
   "Blues",
   "Classic Rock",
@@ -158,5 +168,3 @@ genres = Hash[[
   "JPop",
   "Synthpop"
 ].map { |genre| [genre, Genre.find_or_create_by(name: genre)] }]
-
-
